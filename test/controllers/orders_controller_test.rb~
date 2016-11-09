@@ -18,7 +18,7 @@ class OrdersControllerTest < ActionController::TestCase
 	item.save!
 	session[:cart_id] = item.cart.id
 	get :new
-	assert_redirected_to store_url
+	assert_redirected_to store_path
   end
 
   test "should create order" do
